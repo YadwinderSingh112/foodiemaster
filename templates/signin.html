@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-{% extends 'base.html' %}
-{% include 'navbar.html' %}
-{% include 'footer.html' %}
-{% include 'search.html' %}
-
-{% load static %}
-{% block content %}
-    <!-- Hero Section Begin -->
-    <section class="hero">
-        <div class="hero__slider owl-carousel">
-            {% comment %} <div class="hero__item">
-=======
 {% load static %}
 <!DOCTYPE html>
 <html lang="zxx">
@@ -33,16 +19,92 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
 
-<body>
+<body class="fixed-position">
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
+    <!-- Sign In Section Begin -->
+    <div class="signin">
+        <div class="signin__warp">
+            <div class="signin__content">
+                <div class="signin__logo">
+                    <a href="#"><img src="img/siign-in-logo.png" alt=""></a>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore
+                    magna aliqua viverra.</p>
+                <div class="signin__form">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab" aria-selected="false">
+                                Sign up
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab" aria-selected="false">
+                                Sign in
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                            <div class="signin__form__text">
+                                <p>with your social network :</p>
+                                <div class="signin__form__signup__social">
+                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" class="google"><i class="fa fa-google"></i></a>
+                                </div>
+                                <div class="divide">or</div>
+                                <form action="#">
+                                    <input type="text" placeholder="User Name*">
+                                    <input type="text" placeholder="Password">
+                                    <input type="text" placeholder="Confirm Password">
+                                    <input type="text" placeholder="Email Address">
+                                    <input type="text" placeholder="Full Name">
+                                    <label for="user">Choose your role</label>
+                                        <select name="Roles" id="roles">Roles
+                                            <option id="Reader">Reader</option>
+                                            <option id="Content_writer">Chef</option>
+                                        </select>
+                                    <label for="sign-agree-check">
+                                        I agree to the terms & conditions
+                                        <input type="checkbox" id="sign-agree-check">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <button type="submit" class="site-btn">Register Now</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-2" role="tabpanel">
+                            <div class="signin__form__text">
+                                <p>with your social network :</p>
+                                <div class="signin__form__signup__social">
+                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" class="google"><i class="fa fa-google"></i></a>
+                                </div>
+                                <div class="divide">or</div>
+                                <form action="#">
+                                    <input type="text" placeholder="User Name*">
+                                    <input type="text" placeholder="Password">
+                                    <button type="submit" class="site-btn">Sign In</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign In Section End -->
 
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
@@ -56,16 +118,7 @@
                 <li><a href="#">Recipes</a></li>
                 <li><a href="#">Dinner</a></li>
                 <li><a href="#">Desserts</a></li>
-                <li class="dropdown"><a href="#">Pages</a>
-                    <ul class="dropdown__menu">
-                        <li><a href="./categories-grid.html">Categories Grid</a></li>
-                        <li><a href="./categories-list.html">Categories List</a></li>
-                        <li><a href="./single-post.html">Single Post</a></li>
-                        <li><a href="signin">Sign In</a></li>
-                        <li><a href="./404.html">404</a></li>
-                        <li><a href="./typography.html">Typography</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Vegan</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
@@ -118,7 +171,7 @@
                     <div class="col-lg-8 col-md-10 order-md-2 order-3">
                         <nav class="header__menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
+                                <li><a href="./index.html">Home</a></li>
                                 <li><a href="#">Recipes</a>
                                     <div class="header__megamenu__wrapper">
                                         <div class="header__megamenu">
@@ -177,16 +230,7 @@
                                 </li>
                                 <li><a href="#">Dinner</a></li>
                                 <li><a href="#">Desserts</a></li>
-                                <li class="dropdown"><a href="#">Pages</a>
-                                    <ul class="dropdown__menu">
-                                        <li><a href="./categories-grid.html">Categories Grid</a></li>
-                                        <li><a href="./categories-list.html">Categories List</a></li>
-                                        <li><a href="./single-post.html">Single Post</a></li>
-                                        <li><a href="signin">Sign In</a></li>
-                                        <li><a href="./404.html">404</a></li>
-                                        <li><a href="./typography.html">Typography</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="#">Vegan</a></li>
                                 <li><a href="./about.html">About</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
@@ -204,7 +248,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__btn">
-                        <a href="signin" class="primary-btn">Subscribe</a>
+                        <a href="#" class="primary-btn">Subscribe</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -230,12 +274,92 @@
     <section class="hero">
         <div class="hero__slider owl-carousel">
             <div class="hero__item">
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 p-0">
                             <div class="hero__inside__item hero__inside__item--wide set-bg"
                                 data-setbg="{% static 'img/hero/hero-1.jpg' %}">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>s-
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h4>Vegan White Peach Mug Cobbler With CardamomVegan<br /> White Peach Mug
+                                            Cobbler With Cardamom</h4>
+                                        <ul class="widget">
+                                            <li>by <span>Admin</span></li>
+                                            <li>3 min read</li>
+                                            <li>20 Comment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p-0">
+                            <div class="hero__inside__item hero__inside__item--small set-bg"
+                                data-setbg="{% static 'img/hero/hero-2.jpg'%}">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>How to Make a Milkshake With Any <br />Ice Cream, Any Toppings...</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero__inside__item hero__inside__item--small set-bg"
+                                data-setbg="{% static 'img/hero/hero-3.jpg'%}">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>Vintage Copper Preserve Pan with <br />Brass Handles, Mid 19th Century</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p-0">
+                            <div class="hero__inside__item set-bg" data-setbg="{% static 'img/hero/hero-4.jpg'%}">
+                                <div class="hero__inside__item__text">
+                                    <div class="hero__inside__item--meta">
+                                        <span>08</span>
+                                        <p>Aug</p>
+                                    </div>
+                                    <div class="hero__inside__item--text">
+                                        <ul class="label">
+                                            <li>Vegan</li>
+                                            <li>Desserts</li>
+                                        </ul>
+                                        <h5>Marinated Lentil Salad with Zucch <br />ini and Tomatoes</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 p-0">
+                            <div class="hero__inside__item hero__inside__item--wide set-bg"
+                                data-setbg="{% static 'img/hero/hero-1.jpg'%}">
                                 <div class="hero__inside__item__text">
                                     <div class="hero__inside__item--meta">
                                         <span>08</span>
@@ -257,9 +381,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6  p-0">
+                        <div class="col-lg-3 p-0">
                             <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{% static 'img/hero/hero-2.jpg' %}">
+                                data-setbg="{% static 'img/hero/hero-3.jpg'%}">
                                 <div class="hero__inside__item__text">
                                     <div class="hero__inside__item--meta">
                                         <span>08</span>
@@ -275,7 +399,7 @@
                                 </div>
                             </div>
                             <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{% static 'img/hero/hero-3.jpg' %}">
+                                data-setbg="{% static 'img/hero/hero-2.jpg'%}">
                                 <div class="hero__inside__item__text">
                                     <div class="hero__inside__item--meta">
                                         <span>08</span>
@@ -291,8 +415,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6  p-0">
-                            <div class="hero__inside__item set-bg" data-setbg="{% static 'img/hero/hero-4.jpg' %}">
+                        <div class="col-lg-3 p-0">
+                            <div class="hero__inside__item set-bg" data-setbg="{% static 'img/hero/hero-4.jpg'%}">
                                 <div class="hero__inside__item__text">
                                     <div class="hero__inside__item--meta">
                                         <span>08</span>
@@ -310,433 +434,7 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-            </div> {% endcomment %}
-            <div class="hero__item">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6 p-0">
-                            {% for cat in CAT1|slice:"1" %}
-                            <div class="hero__inside__item hero__inside__item--wide set-bg"
-                            data-setbg="{{cat.image.url}}">
-                            <div class="hero__inside__item__text">
-                                <div class="hero__inside__item--meta">
-                                    <span>{{cat.created_on.date}}</span>
-                                    <p>Aug</p>
-                                </div>
-                                <div class="hero__inside__item--text">
-                                    <ul class="label">
-                                        <li>{{cat.category}}</li>
-                                        <li>Desserts</li>
-                                    </ul>
-                                    <h5>{{cat.small_description}}</h5>
-                                    <ul class="widget">
-                                        <li>by <span>{{cat.author}}</span></li>
-                                        <li>3 min read</li>
-                                        <li>20 Comment</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>                            
-                        </div>
-                        <div class="col-lg-3 col-md-6 p-0">
-                            {% for cat in CAT1|slice:"1:2" %}
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{{ cat.image.url }}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{{cat.image.url}}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                            
-                        </div>                       
-                        <div class="col-lg-3 col-md-6 p-0">
-                            {% for cat in CAT1|slice:"3:4" %}
-                            <div class="hero__inside__item set-bg" data-setbg="{{cat.image.url}}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>  
-            <div class="hero__item">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6 p-0">
-                            {% for cat in CAT2|slice:"1" %}
-                            <div class="hero__inside__item hero__inside__item--wide set-bg"
-                            data-setbg="{{cat.image.url}}">
-                            <div class="hero__inside__item__text">
-                                <div class="hero__inside__item--meta">
-                                    <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h4>{{cat.small_description}}</h4>
-                                    <ul class="widget">
-                                        <li>by <span>{{cat.author}}</span></li>
-                                        <li>3 min read</li>
-                                        <li>20 Comment</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>                            
-                        </div>
-                        <div class="col-lg-3 col-md-6 p-0">
-                            {% for cat in CAT2|slice:"1:3" %}
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{{ cat.image.url }}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{{cat.image.url}}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                            
-                        </div>                       
-                        <div class="col-lg-3 col-md-6 p-0">
-                            {% for cat in CAT2|slice:"3:4" %}
-                            <div class="hero__inside__item set-bg" data-setbg="{{cat.image.url}}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <div class="hero__item">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6 p-0">
-                            {% for cat in CAT4|slice:"1" %}
-                            <div class="hero__inside__item hero__inside__item--wide set-bg"
-                            data-setbg="{{cat.image.url}}">
-                            <div class="hero__inside__item__text">
-                                <div class="hero__inside__item--meta">
-                                    <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h4>{{cat.small_description}}</h4>
-                                    <ul class="widget">
-                                        <li>by <span>{{cat.author}}</span></li>
-                                        <li>3 min read</li>
-                                        <li>20 Comment</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>                            
-                        </div>
-                        <div class="col-lg-3 col-md-6 p-0">
-                            {% for cat in CAT4|slice:"1:2" %}
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{{ cat.image.url }}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{{cat.image.url}}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                            
-                        </div>                       
-                        <div class="col-lg-3 col-md-6 p-0">
-                            {% for cat in CAT4|slice:"1" %}
-                            <div class="hero__inside__item set-bg" data-setbg="{{cat.image.url}}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description|safe}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-=======
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
             </div>
-            <div class="hero__item">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6 p-0">
-<<<<<<< HEAD
-                            {% for cat in CAT3|slice:"1" %}
-                            <div class="hero__inside__item hero__inside__item--wide set-bg"
-                            data-setbg="{{cat.image.url}}">
-                            <div class="hero__inside__item__text">
-                                <div class="hero__inside__item--meta">
-                                    <span>{{cat.created_on.date}}</span>
-=======
-                            <div class="hero__inside__item hero__inside__item--wide set-bg"
-                                data-setbg="{% static 'img/hero/hero-1.jpg' %}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>08</span>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-<<<<<<< HEAD
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h4>{{cat.small_description}}</h4>
-                                    <ul class="widget">
-                                        <li>by <span>{{cat.author}}</span></li>
-                                        <li>3 min read</li>
-                                        <li>20 Comment</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>                            
-                        </div>
-                        <div class="col-lg-3 col-md-6 p-0">
-                            {% for cat in CAT3|slice:"1:2" %}
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{{ cat.image.url }}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-=======
-                                            <li>Vegan</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h4>Vegan White Peach Mug Cobbler With CardamomVegan<br /> White Peach Mug
-                                            Cobbler With Cardamom</h4>
-                                        <ul class="widget">
-                                            <li>by <span>Admin</span></li>
-                                            <li>3 min read</li>
-                                            <li>20 Comment</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 p-0">
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-                                data-setbg="{% static 'img/hero/hero-3.jpg' %}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>08</span>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-<<<<<<< HEAD
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-=======
-                                            <li>Vegan</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>How to Make a Milkshake With Any <br />Ice Cream, Any Toppings...</h5>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hero__inside__item hero__inside__item--small set-bg"
-<<<<<<< HEAD
-                                data-setbg="{{cat.image.url}}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-=======
-                                data-setbg="{% static 'img/hero/hero-2.jpg' %}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>08</span>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-<<<<<<< HEAD
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                            
-                        </div>                       
-                        <div class="col-lg-3 col-md-6 p-0">
-                            {% for cat in CAT3|slice:":-1" %}
-                            <div class="hero__inside__item set-bg" data-setbg="{{cat.image.url}}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>{{cat.created_on.date}}</span>
-=======
-                                            <li>Vegan</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>Vintage Copper Preserve Pan with <br />Brass Handles, Mid 19th Century</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 p-0">
-                            <div class="hero__inside__item set-bg" data-setbg="{% static 'img/hero/hero-4.jpg' %}">
-                                <div class="hero__inside__item__text">
-                                    <div class="hero__inside__item--meta">
-                                        <span>08</span>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
-                                        <p>Aug</p>
-                                    </div>
-                                    <div class="hero__inside__item--text">
-                                        <ul class="label">
-<<<<<<< HEAD
-                                            <li>{{cat.category}}</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>{{cat.small_description}}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-=======
-                                            <li>Vegan</li>
-                                            <li>Desserts</li>
-                                        </ul>
-                                        <h5>Marinated Lentil Salad with Zucch <br />ini and Tomatoes</h5>
-                                    </div>
-                                </div>
-                            </div>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
-                        </div>
-                    </div>
-                </div>
-            </div>
-<<<<<<< HEAD
-            
-=======
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
         </div>
     </section>
     <!-- Hero Section End -->
@@ -783,38 +481,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
-<<<<<<< HEAD
-                        {% for post in objs|slice:"1" %}
-                        <div class="categories__post__item categories__post__item--large">
-                            <div class="categories__post__item__pic set-bg"
-                                data-setbg="{{post.image.url}}">
-                                <div class="post__meta">
-                                    <h4>{{post.created_on.date}}</h4>
-=======
                         <div class="categories__post__item categories__post__item--large">
                             <div class="categories__post__item__pic set-bg"
                                 data-setbg="{% static 'img/categories/categories-post/cp-1.jpg' %}">
                                 <div class="post__meta">
                                     <h4>08</h4>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                                     <span>Aug</span>
                                 </div>
                             </div>
                             <div class="categories__post__item__text">
                                 <ul class="post__label--large">
-<<<<<<< HEAD
-                                    <li>{{post.category}}</li>
-                                    <li>Desserts</li>
-                                </ul>
-                                <h3><a href="{% url 'article_detail' post.slug %}">{{post.title}}</a></h3>
-                                <ul class="post__widget">
-                                    <li>by <span>{{post.author}}</span></li>
-                                    <li>3 min read</li>
-                                    <li>20 Comment</li>
-                                </ul>
-                                <p>{{post.small_description}}</p>
-                                <a href="{% url 'article_detail' post.slug %}" class="primary-btn">Read more</a>
-=======
                                     <li>Vegan</li>
                                     <li>Desserts</li>
                                 </ul>
@@ -831,7 +507,6 @@
                                     reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
                                     excepteur sint ...</p>
                                 <a href="#" class="primary-btn">Read more</a>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                                 <div class="post__social">
                                     <span>Share</span>
                                     <a href="#"><i class="fa fa-facebook"></i> <span>82</span></a>
@@ -840,51 +515,18 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
-                        {% endfor %}
                         <div class="row">
-                            {% for post in objs %}
-                            {% if forloop.counter|divisibleby:2 %}
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="categories__post__item">
-                                    <div class="categories__post__item__pic set-bg"
-                                        data-setbg="{{ post.image.url }}">
-                                        <div class="post__meta">
-                                            <h6>{{post.created_on.date}}</h6>
-=======
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="categories__post__item">
                                     <div class="categories__post__item__pic small__item set-bg"
                                         data-setbg="{% static 'img/categories/categories-post/cp-2.jpg' %}">
                                         <div class="post__meta">
                                             <h4>08</h4>
                                             <span>Aug</span>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                                         </div>
                                     </div>
                                     <div class="categories__post__item__text">
                                         <span class="post__label">Recipe</span>
-<<<<<<< HEAD
-                                        <h3><a href="{% url 'article_detail' post.slug %}">{{post.title}}</a></h3>
-                                        <ul class="post__widget">
-                                            <li>by <span>{{ user }}</span></li>
-                                            <li>created on : Time ({{ post.created_on.time }})</li>
-                                            <li>20 Comment</li>
-                                        </ul>
-                                        <p>{{post.small_description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {% else %}
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="categories__post__item">
-                                    <div class="categories__post__item__pic set-bg"
-                                        data-setbg="{{ post.image.url }}">
-                                        <div class="post__meta">
-                                            <h6>{{post.created_on.date}}</h6>
-                                            {% comment %} <span>Aug</span> {% endcomment %}
-=======
                                         <h3><a href="#">The Best Weeknight Baked Potatoes, 3 Creative Ways</a></h3>
                                         <ul class="post__widget">
                                             <li>by <span>Admin</span></li>
@@ -902,31 +544,10 @@
                                         <div class="post__meta">
                                             <h4>08</h4>
                                             <span>Aug</span>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                                         </div>
                                     </div>
                                     <div class="categories__post__item__text">
                                         <ul class="post__label--large">
-<<<<<<< HEAD
-                                            <li>{{ post.category }}</li>
-                                            {% comment %} <li>Desserts</li> {% endcomment %}
-                                        </ul>
-                                        <h3><a href="{% url 'article_detail' post.slug %}">{{post.title}}</a>
-                                        </h3>
-                                        <ul class="post__widget">
-                                            <li>by <span>{{ user }}</span></li>
-                                            <li>created on : Time ({{ post.created_on.time }})</li>
-                                            {% comment %} <li>20 Comment</li> {% endcomment %}
-                                        </ul>
-                                        <p>{{post.small_description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endif %}
-                            {% endfor %}
-                        
-                            
-=======
                                             <li>Vegan</li>
                                             <li>Desserts</li>
                                         </ul>
@@ -984,7 +605,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="categories__post__item">
                                     <div class="categories__post__item__pic smaller__large set-bg"
                                         data-setbg="{% static 'img/categories/categories-post/cp-3.jpg' %}">
@@ -1059,7 +680,6 @@
                                     </div>
                                 </div>
                             </div>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                             <div class="col-lg-12 text-center">
                                 <div class="load__more__btn">
                                     <a href="#">Load more</a>
@@ -1185,9 +805,6 @@
         </div>
     </section>
     <!-- Categories Section End -->
-<<<<<<< HEAD
-{% endblock  %}
-=======
 
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -1225,30 +842,25 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer__text">
-                        <div class="footer__logo">
-                            <a href="#"><img src="img/logo.png" alt=""></a>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut<br /> labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                            commodo viverra<br /> maecenas accumsan lacus vel facilisis. </p>
-                        <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-envelope-o"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer__copyright">
-                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                    </div>
+            <div class="footer__text">
+                <div class="footer__logo">
+                    <a href="#"><img src="img/logo.png" alt=""></a>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br />
+                    labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra<br />
+                    maecenas accumsan lacus vel facilisis. </p>
+                <div class="footer__social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#"><i class="fa fa-envelope-o"></i></a>
                 </div>
             </div>
+            <div class="footer__copyright">
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
         </div>
     </footer>
     <!-- Footer Section End -->
@@ -1263,14 +875,14 @@
         </div>
     </div>
     <!-- Search End -->
-    {% load static %}
+
     <!-- Js Plugins -->
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    {% load static %}
+    <script src="{% static '/js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static '/js/bootstrap.min.js'%}"></script>
+    <script src="{% static '/js/jquery.slicknav.js'%}"></script>
+    <script src="{% static '/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static '/js/main.js'%}"></script>
 </body>
 
 </html>
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd

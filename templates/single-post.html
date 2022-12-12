@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 {% load static %}
 {% include 'navbar.html' %}
@@ -5,11 +6,221 @@
     <!-- Single Post Section Begin -->
     <section class="single-post spad">
         <div class="single-post__hero set-bg" data-setbg="{{ post.image.url }}"></div>
+=======
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Foodeiblog Template">
+    <meta name="keywords" content="Foodeiblog, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foodeiblog | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unna:400,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="./index.html"><img src="img/humberger/humberger-logo.png" alt=""></a>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Dinner</a></li>
+                <li><a href="#">Desserts</a></li>
+                <li class="dropdown"><a href="#">Pages</a>
+                    <ul class="dropdown__menu">
+                        <li><a href="./categories-grid.html">Categories Grid</a></li>
+                        <li><a href="./categories-list.html">Categories List</a></li>
+                        <li><a href="./single-post.html">Single Post</a></li>
+                        <li><a href="./signin.html">Sign In</a></li>
+                        <li><a href="./404.html">404</a></li>
+                        <li><a href="./typography.html">Typography</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="humberger__menu__about">
+            <div class="humberger__menu__title sidebar__item__title">
+                <h6>About me</h6>
+            </div>
+            <img src="img/humberger/humberger-about.jpg" alt="">
+            <h6>Hi every one! I,m Lena Mollein.</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            <div class="humberger__menu__about__social sidebar__item__follow__links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-envelope-o"></i></a>
+            </div>
+        </div>
+        <div class="humberger__menu__subscribe">
+            <div class="humberger__menu__title sidebar__item__title">
+                <h6>Subscribe</h6>
+            </div>
+            <p>Subscribe to our newsletter and get our newest updates right on your inbox.</p>
+            <form action="#">
+                <input type="text" class="email-input" placeholder="Your email">
+                <label for="agree-check">
+                    I agree to the terms & conditions
+                    <input type="checkbox" id="agree-check">
+                    <span class="checkmark"></span>
+                </label>
+                <button type="submit" class="site-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-1 col-6 order-md-1 order-1">
+                        <div class="header__humberger">
+                            <i class="fa fa-bars humberger__open"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-10 order-md-2 order-3">
+                        <nav class="header__menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="#">Recipes</a>
+                                    <div class="header__megamenu__wrapper">
+                                        <div class="header__megamenu">
+                                            <div class="header__megamenu__item">
+                                                <div class="header__megamenu__item--pic set-bg"
+                                                    data-setbg="img/megamenu/p-1.jpg">
+                                                    <div class="label">Vegan</div>
+                                                </div>
+                                                <div class="header__megamenu__item--text">
+                                                    <h5><a href="#">How to Make a Milkshake With Any Ice Cream ...</a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="header__megamenu__item">
+                                                <div class="header__megamenu__item--pic set-bg"
+                                                    data-setbg="img/megamenu/p-2.jpg">
+                                                    <div class="label">Vegan</div>
+                                                </div>
+                                                <div class="header__megamenu__item--text">
+                                                    <h5><a href="#">How to Make a Milkshake With Any Ice Cream ...</a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="header__megamenu__item">
+                                                <div class="header__megamenu__item--pic set-bg"
+                                                    data-setbg="img/megamenu/p-3.jpg">
+                                                    <div class="label">Vegan</div>
+                                                </div>
+                                                <div class="header__megamenu__item--text">
+                                                    <h5><a href="#">How to Make a Milkshake With Any Ice Cream ...</a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="header__megamenu__item">
+                                                <div class="header__megamenu__item--pic set-bg"
+                                                    data-setbg="img/megamenu/p-4.jpg">
+                                                    <div class="label">Vegan</div>
+                                                </div>
+                                                <div class="header__megamenu__item--text">
+                                                    <h5><a href="#">How to Make a Milkshake With Any Ice Cream ...</a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="header__megamenu__item">
+                                                <div class="header__megamenu__item--pic set-bg"
+                                                    data-setbg="img/megamenu/p-5.jpg">
+                                                    <div class="label">Vegan</div>
+                                                </div>
+                                                <div class="header__megamenu__item--text">
+                                                    <h5><a href="#">How to Make a Milkshake With Any Ice Cream ...</a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#">Dinner</a></li>
+                                <li><a href="#">Desserts</a></li>
+                                <li><a href="#">Vegan</a></li>
+                                <li><a href="./about.html">About</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 col-md-1 col-6 order-md-3 order-2">
+                        <div class="header__search">
+                            <i class="fa fa-search search-switch"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__btn">
+                        <a href="./signin.html" class="primary-btn">Subscribe</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-md-2">
+                    <div class="header__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Single Post Section Begin -->
+    <section class="single-post spad">
+        <div class="single-post__hero set-bg" data-setbg="img/categories/single-post/single-post-hero.jpg"></div>
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
                     <div class="single-post__title">
                         <div class="single-post__title__meta">
+<<<<<<< HEAD
                             <h4><b>{{ post.created_on.date}}</b></h4>
                         </div>
                         <div class="single-post__title__text">
@@ -22,6 +233,20 @@
                             <ul class="widget">
                                 <li>by :{{ post.author }}</li>
                                 <!--<li>3 min read</li>-->
+=======
+                            <h2>08</h2>
+                            <span>Aug</span>
+                        </div>
+                        <div class="single-post__title__text">
+                            <ul class="label">
+                                <li>Vegan</li>
+                                <li>Desserts</li>
+                            </ul>
+                            <h4>Weight loss diet: Ditching this one food can help you slim down fast - what is it?</h4>
+                            <ul class="widget">
+                                <li>by Admin</li>
+                                <li>3 min read</li>
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                                 <li>20 Comment</li>
                             </ul>
                         </div>
@@ -34,12 +259,16 @@
                             <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
                         </ul>
                     </div>
+<<<<<<< HEAD
                     <div>
                         <p><h6>{{ post.content|safe }}</h6></p>
                     </div>
                     <div class="single-post__recipe__details">
                         <div class="single-post__recipe__details__option">
                     {% comment %} <div class="single-post__top__text">
+=======
+                    <div class="single-post__top__text">
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure Lorem ipsum dolor sit amet,
@@ -125,7 +354,11 @@
                     <div class="single-post__more__details">
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
+<<<<<<< HEAD
                                 <img src="{% static 'img/categories/single-post/single-post-desc.jpg' %}" alt="">
+=======
+                                <img src="img/categories/single-post/single-post-desc.jpg" alt="">
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <p>Vestibulum commodo nulla eu augue tincidunt rutrum. Suspendisse interdum lacus in
@@ -187,10 +420,17 @@
                                 </a>
                             </div>
                         </div>
+<<<<<<< HEAD
                     </div> {% endcomment %}
                     <div class="single-post__author__profile">
                         <div class="single-post__author__profile__pic">
                             <img src="{% static 'img/categories/single-post/author-profile.jpg' %}" alt="">
+=======
+                    </div>
+                    <div class="single-post__author__profile">
+                        <div class="single-post__author__profile__pic">
+                            <img src="img/categories/single-post/author-profile.jpg" alt="">
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                         </div>
                         <div class="single-post__author__profile__text">
                             <h4>Lena Mollein.</h4>
@@ -212,7 +452,11 @@
                         </div>
                         <div class="single-post__comment__item">
                             <div class="single-post__comment__item__pic">
+<<<<<<< HEAD
                                 <img src="{% static 'img/categories/single-post/comment/comment-1.jpg' %}" alt="">
+=======
+                                <img src="img/categories/single-post/comment/comment-1.jpg" alt="">
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                             </div>
                             <div class="single-post__comment__item__text">
                                 <h5>Brandon Kelley</h5>
@@ -228,7 +472,11 @@
                         </div>
                         <div class="single-post__comment__item single-post__comment__item--reply">
                             <div class="single-post__comment__item__pic">
+<<<<<<< HEAD
                                 <img src="{% static 'img/categories/single-post/comment/comment-2.jpg' %}" alt="">
+=======
+                                <img src="img/categories/single-post/comment/comment-2.jpg" alt="">
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                             </div>
                             <div class="single-post__comment__item__text">
                                 <h5>Brandon Kelley</h5>
@@ -244,7 +492,11 @@
                         </div>
                         <div class="single-post__comment__item">
                             <div class="single-post__comment__item__pic">
+<<<<<<< HEAD
                                 <img src="{% static 'img/categories/single-post/comment/comment-3.jpg' %}" alt="">
+=======
+                                <img src="img/categories/single-post/comment/comment-3.jpg" alt="">
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
                             </div>
                             <div class="single-post__comment__item__text">
                                 <h5>Brandon Kelley</h5>
@@ -278,5 +530,93 @@
         </div>
     </section>
     <!-- Single Post Section End -->
+<<<<<<< HEAD
 {% endblock  %}
 </body>
+=======
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer__instagram">
+                <div class="footer__instagram__avatar">
+                    <div class="footer__instagram__avatar--pic">
+                        <img src="img/footer/instagram-avatar.jpg" alt="">
+                    </div>
+                    <div class="footer__instagram__avatar--text">
+                        <h5>@ foodieblog</h5>
+                        <span>23,7k follower</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+                        <div class="footer__instagram__item set-bg" data-setbg="img/footer/ip-1.jpg"></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+                        <div class="footer__instagram__item set-bg" data-setbg="img/footer/ip-2.jpg"></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+                        <div class="footer__instagram__item set-bg" data-setbg="img/footer/ip-3.jpg"></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+                        <div class="footer__instagram__item set-bg" data-setbg="img/footer/ip-4.jpg"></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+                        <div class="footer__instagram__item set-bg" data-setbg="img/footer/ip-5.jpg"></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+                        <div class="footer__instagram__item set-bg" data-setbg="img/footer/ip-6.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__text">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut<br /> labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                            commodo viverra<br /> maecenas accumsan lacus vel facilisis. </p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd

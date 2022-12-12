@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import HttpResponse, HttpResponseRedirect, get_object_or_404, render, redirect
 from account.models import *
 from django.views.generic import *
@@ -82,3 +83,19 @@ def contact(request):
         #                 # if  self.request.user.is_author:
 
 #         # ...
+=======
+from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+        return render(request, 'index.html')
+
+def category_grid(request):
+        return render(request, 'categories-grid.html')
+
+def category_list(request):
+        return render(request, 'categories-list.html')
+
+def category_single(request):
+        return render(request, 'single-post.html')
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd

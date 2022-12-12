@@ -39,9 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'index.apps.IndexConfig',
+<<<<<<< HEAD
     'account',
     'ckeditor',
     'ckeditor_uploader',
+=======
+    'login.apps.LoginConfig',
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
 ]
 
 MIDDLEWARE = [
@@ -122,14 +126,18 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+<<<<<<< HEAD
 AUTH_USER_MODEL = 'account.CustomUser'
 
+=======
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+<<<<<<< HEAD
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
@@ -200,3 +208,5 @@ CKEDITOR_CONFIGS = {
 }
 
 
+=======
+>>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
