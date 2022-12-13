@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% include 'navbar.html' %}
+{% block content %}
+    {% if user.is_authenticated %}
+        {% if user.is_reader %}
+          Hey {{ user }}!!!, you are not supposed to be here
+        {% else %}
+        <div class="d-flex justify-content-center" 
+   style="
+   border-style: dotted;
+   border-radius: 15px;
+   padding: 20px;
+   color: rgb(240, 138, 66);
+   background-color: rgba(218, 217, 204, 0.911);
+   margin-left : 200px; 
+   margin-right: 200px; 
+   ">
+
+    <form enctype='multipart/form-data' method="POST">
+            {% csrf_token %}
+            <div style=>
+                {{ form.media }}
+                <p><strong>Title: </strong>{{ form.title|safe }}</p>
+                <p><strong>Small Description: </strong>{{ form.small_description|safe }}</p>
+                <p><strong>Choose the category:</strong> {{ form.category }}</p>
+                <p><strong>Content for the post :</strong> {{ form.content|safe }}</p>
+            </div>
+            <br>
+          <div class="d-flex align-items-center">
+            <button class = "btn btn-primary" type="submit" >Submit</button>
+          </div>
+        </form>
+      </div>
+        {% endif %}
+    {% endif %} 
+   
+{% endblock content %}
+

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-78n5c-4r+mypqbw%w-=%z5o4tcp7fzs@wgvwvh_30g%&at=3*u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,19 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'index.apps.IndexConfig',
-<<<<<<< HEAD
     'account',
     'ckeditor',
+    'corsheaders',
     'ckeditor_uploader',
-=======
-    'login.apps.LoginConfig',
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
-]
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -126,18 +124,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-<<<<<<< HEAD
 AUTH_USER_MODEL = 'account.CustomUser'
 
-=======
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
-<<<<<<< HEAD
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
@@ -206,7 +201,26 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
-
-
-=======
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
+CORS_ALLOW_ALL_ORIGINS= True
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.in.ngrok.io/'
+]

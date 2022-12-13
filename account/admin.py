@@ -13,4 +13,5 @@ admin.site.register(Category)
 admin.site.register(CustomUser)
 admin.site.register(Author)
 admin.site.register(Reader)
+admin.site.register(Comment)
     # date_hierarchy='publish'

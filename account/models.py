@@ -12,15 +12,11 @@ class CustomUser(AbstractUser):
     # userrole = models.ForeignKey(CustomRole, on_delete=models.CASCADE)
     is_reader = models.BooleanField(default= False)
     is_author = models.BooleanField(default= False)
+    about_me = models.CharField(max_length=200)
 class Author(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    #like = models.ManyToManyField()
-    # comments = models.ManyToManyField()
 class Reader(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    #like = models.ManyToManyField()
-    # comments = models.ManyToManyField()
-
 class Category(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=5, unique=True)
@@ -54,7 +50,11 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now= True)
     content = RichTextUploadingField()
     created_on = models.DateTimeField(auto_now_add=True)
-    #likee = models.ManyToManyField
+    likee = models.ManyToManyField(CustomUser, related_name= "blog_posts")
+
+    def total_likes(self):
+        return self.likee.count()
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
@@ -77,5 +77,17 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("index")
-    
-    
+
+class Comment(models.Model):
+        post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
+        user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+        body = models.TextField()
+        created_on = models.DateTimeField(auto_now_add=True)
+        # active = models.BooleanField(default=False)
+
+        def __str__(self):
+            return '%s - %s' % (self.post.title, self.user)
+        @property
+        def number_of_comments(self):
+            return Comment.objects.filter(post=self).count()
+             

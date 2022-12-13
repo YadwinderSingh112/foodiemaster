@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% include 'navbar.html' %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
+{% block content %}
+    {% if user.is_authenticated %}
+        {% if user.is_reader %}
+          Hey {{ user }}!!!, you are not supposed to be here
+        {% else %}
+        <div class="d-flex justify-content-center" 
+   style="
+   border-style: dotted;
+   border-radius: 15px;
+   padding: 20px;
+   color: rgb(240, 138, 66);
+   background-color: rgba(218, 217, 204, 0.911);
+   margin-left : 200px; 
+   margin-right: 200px; 
+   ">
+
+    <form method="POST">
+            {% csrf_token %}
+            <div style=>
+                {{ form.as_p }}
+            </div>
+            <br>
+          <div class="d-flex align-items-center">
+            <button class = "btn btn-primary" type="submit" >Submit</button>
+          </div>
+        </form>
+      </div>
+        {% endif %}
+    {% endif %} 
+   
+{% endblock content %}
+

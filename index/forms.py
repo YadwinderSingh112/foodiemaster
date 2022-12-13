@@ -1,6 +1,10 @@
 from django.forms import  *
-from account.models import Post
+from account.models import *
 from ckeditor.widgets import CKEditorWidget
+class CommentForm(ModelForm):
+    class Meta:
+        model = Comment
+        fields = '__all__' 
 class PostForm(ModelForm):
     # content = CharField(widget = CKEditorWidget())
     class Meta:

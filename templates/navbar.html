@@ -12,16 +12,6 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="{% url 'index' %}">Home</a></li>
-                            
-                            {% comment %} <li class="dropdown"><a href="#">Categories</a>
-                                
-                                <ul class="dropdown__menu">
-                                    {% for cat in categories %}
-                                    <li><a href="{% url 'category_list' cat.name %}">{{cat.name}}</a><li>
-                                {% endfor %}
-                                </ul>
-                                
-                            </li> {% endcomment %}
                             {% for cat in categories|slice:"1" %}
                             <li><a href="{% url 'category_list' cat.name %}">Recipes</a>
                                 <div class="header__megamenu__wrapper">

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import HttpResponse, HttpResponseRedirect, get_object_or_404, render, redirect
 from account.models import *
 from django.views.generic import *
@@ -28,6 +27,22 @@ def index(request):
         }
         return render(request, 'index.html', list)
         
+def likeView(request, slug):
+        post = get_object_or_404(Post, slug = request.POST.get('post_slug'))
+        if post.likee.filter(id = request.user.id).exists():
+                post.likee.remove(request.user)
+                liked = False
+        else:
+                post.likee.add(request.user)
+                liked = True
+        return HttpResponseRedirect(reverse('article_detail', args=[str(slug)]))
+
+class UpdatePost(UpdateView):
+        model = Post
+        fields = ['image','title', 'body']
+        form_class = PostForm
+        template_name = 'Edit.html'
+
 def Add_PostView(request):
         if request.method == 'POST':
                 form = PostForm(request.POST, request.FILES)
@@ -64,9 +79,35 @@ def category_list(request, categ = None):
 class category_single(DetailView):
         model = Post
         template_name = 'single-post.html'
+
         def slugg (request, slug):
-                obj = Post.objects.get(slug=slug)
-                return render(request,'single-post.html', {'obj': obj})
+                post = Post.objects.get(slug=slug)
+                return render(request,'single-post.html', {'obj': post })
+        
+        def get_context_data(self, **kwargs):
+                comments_connected = Comment.objects.filter(post=self.get_object()).order_by('-created_on')
+                context = super(category_single, self).get_context_data(**kwargs)
+                stuff = get_object_or_404(Post, slug = self.kwargs['slug'])
+                total_likes = stuff.total_likes()
+                liked = False
+                if stuff.likee.filter(id = self.request.user.id).exists():
+                        liked = True
+                context["total_likes"] = total_likes
+                context['comments'] = comments_connected
+                if self.request.user.is_authenticated:
+                        context['comment_form'] = CommentForm(instance=self.request.user)
+                context['post_liked'] =  liked
+                return context
+        def post(self, request, *args, **kwargs):
+                new_comment = Comment(body=request.POST.get('body'),
+                                  user=self.request.user,
+                                  post=self.get_object())
+                new_comment.save()
+                return self.get(self, request, *args, **kwargs)
+        # def form_valid(self, comment_form):
+        #         comment_form.instance.user = self.request.user 
+        #         comment_form.instance.post_id = self.kwargs['slug']
+        #         return super().form_valid(comment_form)
 def about(request):
         return render(request, 'about.html')
 
@@ -83,19 +124,3 @@ def contact(request):
         #                 # if  self.request.user.is_author:
 
 #         # ...
-=======
-from django.shortcuts import render
-
-# Create your views here.
-def index(request):
-        return render(request, 'index.html')
-
-def category_grid(request):
-        return render(request, 'categories-grid.html')
-
-def category_list(request):
-        return render(request, 'categories-list.html')
-
-def category_single(request):
-        return render(request, 'single-post.html')
->>>>>>> 9e524bd088ed0f18ac4b93ae4d8045055fa4c7bd
